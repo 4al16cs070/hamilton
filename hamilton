@@ -1,0 +1,23 @@
+using namespace std;
+ 
+int main(){
+ 
+    int arr[100005];
+    vector<int> v;
+    vector<int> :: reverse_iterator it;
+    int max = 0;
+    int n;
+    cin >> n;
+    for(int i = 0 ; i < n ; i++) cin >> arr[i];
+ 
+ 
+    for(int i = n - 1 ; i >= 0 ; i --){
+            if(arr[i] >= max){
+                    v.push_back(arr[i]);
+                    max = arr[i];
+            }
+    }
+    for(it = v.rbegin(); it != v.rend() ; it++){
+            cout << *it << " ";
+    }
+}
